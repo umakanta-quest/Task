@@ -58,6 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+            container.viewContext.automaticallyMergesChangesFromParent = true
+            
+            print("Container \(String(describing: storeDescription.url!))")
         })
         return container
     }()

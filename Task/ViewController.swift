@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    
+    lazy var context: NSManagedObjectContext? = {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        return appDelegate?.persistentContainer.viewContext
+    }()
     
     //===============================================================
     //MARK: - ViewController LifeCycles
@@ -32,7 +39,6 @@ class ViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor.gray.cgColor
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -66,14 +72,19 @@ class ViewController: UIViewController {
         let dispatchQueue = DispatchQueue(label:"MyQueue", qos: .background)
         dispatchQueue.async {
             sleep(3)
+            //Success..................
+            
             DispatchQueue.main.async {
+                if let context = self.context {
+                    SampleData.generateSampleDataIfNeeded(context: context)
+                }
+                
                 hideProgressIndicator(view: self.view)
                 
                 self.performSegue(withIdentifier: "showTasks", sender: nil)
             }
         }
     }
-    
     
     
     @objc func editingChanged(_ textField: UITextField) {
