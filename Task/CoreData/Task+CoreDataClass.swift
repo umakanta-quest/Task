@@ -12,5 +12,19 @@ import CoreData
 
 @objc(Task)
 public class Task: NSManagedObject {
-
+    
+    func fetchComplexityLevel(_ complexity: NSNumber) -> NSString {
+        
+        let how = SampleData.Complexity(rawValue: Int(truncating: complexity))
+        switch how {
+        case .easy:
+            return "Easy"
+        case .hard:
+            return "Hard"
+        case .average:
+            return "Average"
+        default:
+            return "Not Specified"
+        }
+    }
 }

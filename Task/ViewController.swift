@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     //===============================================================
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTextField.text = "Umakanta"
+        passwordTextField.text = "Sahoo"
         // Do any additional setup after loading the view.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
