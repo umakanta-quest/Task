@@ -25,8 +25,7 @@ class ViewController: UIViewController {
     //===============================================================
     //MARK: - ViewController LifeCycles
     //===============================================================
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func setUp() {
         usernameTextField.text = "Umakanta"
         passwordTextField.text = "Sahoo"
         // Do any additional setup after loading the view.
@@ -41,6 +40,11 @@ class ViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUp()
     }
 
     override func viewWillAppear(_ animated: Bool) {

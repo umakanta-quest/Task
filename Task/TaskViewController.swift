@@ -60,16 +60,22 @@ class TaskViewController: UIViewController {
         
         tableView.register(UINib.init(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskTableViewCell")
     }
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "taskDetails" {
+            let viewController = segue.destination as! DetailViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                viewController.task = fetchedResultsController.object(at: indexPath)
+            }
+        }
     }
-    */
 
+    
 }
 
 // MARK: - NSFetchedResultsControllerDelegate
@@ -80,7 +86,8 @@ extension TaskViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
-
+// MARK: - UITableViewDataSource, UITableViewDelegate
+//
 extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -103,7 +110,6 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         cell.stausLabel.text = task.status
-        
         cell.complexityLabel.text = task.fetchComplexityLevel(task.complexity!) as String
         
         return cell
@@ -114,4 +120,8 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: "taskDetails", sender: nil)
+    }
 }

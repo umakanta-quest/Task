@@ -23,8 +23,14 @@
 		A7E1C1CC2493C53200D5B130 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C1C92493C53200D5B130 /* ProgressIndicator.swift */; };
 		A7E1C1CF249499B600D5B130 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C1CE249499B600D5B130 /* TaskViewController.swift */; };
 		A7E1C1D82494E6C700D5B130 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C1D62494E6C700D5B130 /* Task+CoreDataClass.swift */; };
-		A7E1C1D92494E6C700D5B130 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C1D72494E6C700D5B130 /* Task+CoreDataProperties.swift */; };
 		A7E1C1DC2494E87F00D5B130 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1C1DB2494E87F00D5B130 /* SampleData.swift */; };
+		A7E2B32F2498DF0200A56ACD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A7E2B32E2498DF0200A56ACD /* README.md */; };
+		A7E2B3312498E2A000A56ACD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B3302498E2A000A56ACD /* DetailViewController.swift */; };
+		A7E2B3332498E85C00A56ACD /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B3322498E85C00A56ACD /* ImagePickerManager.swift */; };
+		A7E2B34024990FDC00A56ACD /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B33D24990FDC00A56ACD /* Task+CoreDataProperties.swift */; };
+		A7E2B34124990FDC00A56ACD /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B33E24990FDC00A56ACD /* Image+CoreDataClass.swift */; };
+		A7E2B34224990FDC00A56ACD /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B33F24990FDC00A56ACD /* Image+CoreDataProperties.swift */; };
+		A7E2B3442499163300A56ACD /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +73,15 @@
 		A7E1C1C92493C53200D5B130 /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		A7E1C1CE249499B600D5B130 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		A7E1C1D62494E6C700D5B130 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A7E1C1D72494E6C700D5B130 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A7E1C1DB2494E87F00D5B130 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		A7E2B32E2498DF0200A56ACD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7E2B3302498E2A000A56ACD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A7E2B3322498E85C00A56ACD /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		A7E2B33424990C6200A56ACD /* Task 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Task 2.xcdatamodel"; sourceTree = "<group>"; };
+		A7E2B33D24990FDC00A56ACD /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7E2B33E24990FDC00A56ACD /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A7E2B33F24990FDC00A56ACD /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 			children = (
 				A7DE49932495396D003E869D /* TaskTableViewCell.swift */,
 				A7DE49942495396D003E869D /* TaskTableViewCell.xib */,
+				A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -108,6 +122,7 @@
 		A7E1C1882493A05500D5B130 = {
 			isa = PBXGroup;
 			children = (
+				A7E2B32E2498DF0200A56ACD /* README.md */,
 				A7E1C1932493A05500D5B130 /* Task */,
 				A7E1C1AD2493A05A00D5B130 /* TaskTests */,
 				A7E1C1B82493A05A00D5B130 /* TaskUITests */,
@@ -137,6 +152,7 @@
 				A7E1C1A22493A05900D5B130 /* LaunchScreen.storyboard */,
 				A7E1C1A52493A05900D5B130 /* Info.plist */,
 				A7E1C1CE249499B600D5B130 /* TaskViewController.swift */,
+				A7E2B3302498E2A000A56ACD /* DetailViewController.swift */,
 				A7E1C1DA2494E71400D5B130 /* CoreData */,
 				A7DE49972495397C003E869D /* TableViewCell */,
 			);
@@ -167,6 +183,7 @@
 				A7E1C1C82493C53200D5B130 /* AppConstants.swift */,
 				A7E1C1C72493C53200D5B130 /* AppUtils.swift */,
 				A7E1C1C92493C53200D5B130 /* ProgressIndicator.swift */,
+				A7E2B3322498E85C00A56ACD /* ImagePickerManager.swift */,
 			);
 			path = "App-Utils";
 			sourceTree = "<group>";
@@ -174,9 +191,11 @@
 		A7E1C1DA2494E71400D5B130 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A7E1C19D2493A05500D5B130 /* Task.xcdatamodeld */,
+				A7E2B33D24990FDC00A56ACD /* Task+CoreDataProperties.swift */,
 				A7E1C1D62494E6C700D5B130 /* Task+CoreDataClass.swift */,
-				A7E1C1D72494E6C700D5B130 /* Task+CoreDataProperties.swift */,
+				A7E2B33F24990FDC00A56ACD /* Image+CoreDataProperties.swift */,
+				A7E2B33E24990FDC00A56ACD /* Image+CoreDataClass.swift */,
+				A7E1C19D2493A05500D5B130 /* Task.xcdatamodeld */,
 				A7E1C1DB2494E87F00D5B130 /* SampleData.swift */,
 			);
 			path = CoreData;
@@ -288,6 +307,7 @@
 			files = (
 				A7DE49962495396D003E869D /* TaskTableViewCell.xib in Resources */,
 				A7E1C1A42493A05900D5B130 /* LaunchScreen.storyboard in Resources */,
+				A7E2B32F2498DF0200A56ACD /* README.md in Resources */,
 				A7E1C1A12493A05900D5B130 /* Assets.xcassets in Resources */,
 				A7E1C19C2493A05500D5B130 /* Main.storyboard in Resources */,
 			);
@@ -314,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E2B3312498E2A000A56ACD /* DetailViewController.swift in Sources */,
 				A7E1C1CC2493C53200D5B130 /* ProgressIndicator.swift in Sources */,
 				A7E1C1D82494E6C700D5B130 /* Task+CoreDataClass.swift in Sources */,
 				A7E1C1CA2493C53200D5B130 /* AppUtils.swift in Sources */,
@@ -322,9 +343,13 @@
 				A7E1C1992493A05500D5B130 /* ViewController.swift in Sources */,
 				A7E1C1CF249499B600D5B130 /* TaskViewController.swift in Sources */,
 				A7E1C1952493A05500D5B130 /* AppDelegate.swift in Sources */,
+				A7E2B3332498E85C00A56ACD /* ImagePickerManager.swift in Sources */,
+				A7E2B34224990FDC00A56ACD /* Image+CoreDataProperties.swift in Sources */,
+				A7E2B34124990FDC00A56ACD /* Image+CoreDataClass.swift in Sources */,
 				A7DE49952495396D003E869D /* TaskTableViewCell.swift in Sources */,
 				A7E1C1DC2494E87F00D5B130 /* SampleData.swift in Sources */,
-				A7E1C1D92494E6C700D5B130 /* Task+CoreDataProperties.swift in Sources */,
+				A7E2B34024990FDC00A56ACD /* Task+CoreDataProperties.swift in Sources */,
+				A7E2B3442499163300A56ACD /* ImageTableViewCell.swift in Sources */,
 				A7E1C1972493A05500D5B130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,9 +684,10 @@
 		A7E1C19D2493A05500D5B130 /* Task.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A7E2B33424990C6200A56ACD /* Task 2.xcdatamodel */,
 				A7E1C19E2493A05500D5B130 /* Task.xcdatamodel */,
 			);
-			currentVersion = A7E1C19E2493A05500D5B130 /* Task.xcdatamodel */;
+			currentVersion = A7E2B33424990C6200A56ACD /* Task 2.xcdatamodel */;
 			path = Task.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
