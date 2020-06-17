@@ -38,7 +38,7 @@ class TaskViewController: UIViewController {
     
     private lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, MMM d, yyyy")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMM d, yyyy")
         return dateFormatter
     }()
     
@@ -57,8 +57,25 @@ class TaskViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
         
-        tableView.register(UINib.init(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskTableViewCell")
+        //tableView.register(UINib.init(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskTableViewCell")
+        tableView.register(UINib.init(nibName: "TaskColumnTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskColumnTableViewCell")
+        
+        let headerView = Bundle.main.loadNibNamed("TaskHeader", owner: self, options: nil)![0] as! UIView
+        // Set the CustomerHeaderView as the tables header view
+        tableView.tableHeaderView = headerView
+        
+        
+        //TaskHeader
+        //tableView.register(UINib.init(nibName: "TaskHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "TaskHeader")
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.tableHeaderView?.frame.size.height = 45
     }
 
     // MARK: - Navigation
@@ -99,14 +116,14 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath) as? TaskTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TaskColumnTableViewCell", for: indexPath) as? TaskColumnTableViewCell else {
             fatalError("###\(#function): Failed to dequeue a Cell.")
         }
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.nameLabel.text = task.name
         if let publishDate = task.createDate {
-            cell.createDateLabel.text = "Created on: " + dateFormatter.string(from: publishDate)
+            cell.createDateLabel.text = dateFormatter.string(from: publishDate)
         }
         
         cell.stausLabel.text = task.status
@@ -116,7 +133,7 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0  
+        return 60.0  
     }
     
 
@@ -124,4 +141,5 @@ extension TaskViewController: UITableViewDataSource, UITableViewDelegate {
         
         self.performSegue(withIdentifier: "taskDetails", sender: nil)
     }
+    
 }

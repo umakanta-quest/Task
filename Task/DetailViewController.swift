@@ -78,7 +78,7 @@ class DetailViewController: UIViewController {
             })*/
             //let message = allText.trimmingCharacters(in: .whitespacesAndNewlines)
             let trimmedStr = allText.trimmingCharacters(in: .punctuationCharacters).trimmingCharacters(in: .whitespacesAndNewlines)
-            let message = (trimmedStr == kEmptyString ? "Task": ("Task with attachment " + trimmedStr)) + " submitted."
+            let message = (trimmedStr == kEmptyString ? "Task": ("Task with attachment (" + trimmedStr + ")")) + " submitted."
             let alert = UIAlertController(title: "Wow!" , message: message, preferredStyle: .alert)
                        
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in

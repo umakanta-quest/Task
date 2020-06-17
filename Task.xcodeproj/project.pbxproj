@@ -31,6 +31,10 @@
 		A7E2B34124990FDC00A56ACD /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B33E24990FDC00A56ACD /* Image+CoreDataClass.swift */; };
 		A7E2B34224990FDC00A56ACD /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B33F24990FDC00A56ACD /* Image+CoreDataProperties.swift */; };
 		A7E2B3442499163300A56ACD /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */; };
+		A7E2B347249A28FE00A56ACD /* TaskColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B345249A28FE00A56ACD /* TaskColumnTableViewCell.swift */; };
+		A7E2B348249A28FE00A56ACD /* TaskColumnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E2B346249A28FE00A56ACD /* TaskColumnTableViewCell.xib */; };
+		A7E2B34C249A35A600A56ACD /* TaskHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E2B34B249A35A600A56ACD /* TaskHeader.swift */; };
+		A7E2B34E249A35CB00A56ACD /* TaskHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E2B34D249A35CB00A56ACD /* TaskHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		A7E2B33E24990FDC00A56ACD /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A7E2B33F24990FDC00A56ACD /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		A7E2B345249A28FE00A56ACD /* TaskColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColumnTableViewCell.swift; sourceTree = "<group>"; };
+		A7E2B346249A28FE00A56ACD /* TaskColumnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskColumnTableViewCell.xib; sourceTree = "<group>"; };
+		A7E2B34B249A35A600A56ACD /* TaskHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHeader.swift; sourceTree = "<group>"; };
+		A7E2B34D249A35CB00A56ACD /* TaskHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,8 @@
 				A7DE49932495396D003E869D /* TaskTableViewCell.swift */,
 				A7DE49942495396D003E869D /* TaskTableViewCell.xib */,
 				A7E2B3432499163300A56ACD /* ImageTableViewCell.swift */,
+				A7E2B345249A28FE00A56ACD /* TaskColumnTableViewCell.swift */,
+				A7E2B346249A28FE00A56ACD /* TaskColumnTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -155,6 +165,8 @@
 				A7E2B3302498E2A000A56ACD /* DetailViewController.swift */,
 				A7E1C1DA2494E71400D5B130 /* CoreData */,
 				A7DE49972495397C003E869D /* TableViewCell */,
+				A7E2B34B249A35A600A56ACD /* TaskHeader.swift */,
+				A7E2B34D249A35CB00A56ACD /* TaskHeader.xib */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -307,9 +319,11 @@
 			files = (
 				A7DE49962495396D003E869D /* TaskTableViewCell.xib in Resources */,
 				A7E1C1A42493A05900D5B130 /* LaunchScreen.storyboard in Resources */,
+				A7E2B348249A28FE00A56ACD /* TaskColumnTableViewCell.xib in Resources */,
 				A7E2B32F2498DF0200A56ACD /* README.md in Resources */,
 				A7E1C1A12493A05900D5B130 /* Assets.xcassets in Resources */,
 				A7E1C19C2493A05500D5B130 /* Main.storyboard in Resources */,
+				A7E2B34E249A35CB00A56ACD /* TaskHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +358,11 @@
 				A7E1C1CF249499B600D5B130 /* TaskViewController.swift in Sources */,
 				A7E1C1952493A05500D5B130 /* AppDelegate.swift in Sources */,
 				A7E2B3332498E85C00A56ACD /* ImagePickerManager.swift in Sources */,
+				A7E2B347249A28FE00A56ACD /* TaskColumnTableViewCell.swift in Sources */,
 				A7E2B34224990FDC00A56ACD /* Image+CoreDataProperties.swift in Sources */,
 				A7E2B34124990FDC00A56ACD /* Image+CoreDataClass.swift in Sources */,
 				A7DE49952495396D003E869D /* TaskTableViewCell.swift in Sources */,
+				A7E2B34C249A35A600A56ACD /* TaskHeader.swift in Sources */,
 				A7E1C1DC2494E87F00D5B130 /* SampleData.swift in Sources */,
 				A7E2B34024990FDC00A56ACD /* Task+CoreDataProperties.swift in Sources */,
 				A7E2B3442499163300A56ACD /* ImageTableViewCell.swift in Sources */,

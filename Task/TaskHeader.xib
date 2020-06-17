@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TaskHeader" customModule="Task">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-0w-QvB">
+                    <rect key="frame" x="0.0" y="0.0" width="338" height="45"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q1J-Yb-miF">
+                            <rect key="frame" x="10" y="5" width="318" height="35"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="Task Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlX-q7-2X8">
+                                    <rect key="frame" x="0.0" y="5.5" width="143" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exl-00-8oK">
+                                    <rect key="frame" x="153" y="9" width="48.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Complexity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-zM-Ijq">
+                                    <rect key="frame" x="211.5" y="9" width="48" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-T1-21P">
+                                    <rect key="frame" x="269.5" y="9" width="48.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="xlX-q7-2X8" firstAttribute="width" secondItem="Q1J-Yb-miF" secondAttribute="width" multiplier="0.45" id="CIz-Wk-gqg"/>
+                                <constraint firstItem="xF1-T1-21P" firstAttribute="width" secondItem="Exl-00-8oK" secondAttribute="width" id="cZr-fG-qWT"/>
+                                <constraint firstItem="8b6-zM-Ijq" firstAttribute="width" secondItem="Exl-00-8oK" secondAttribute="width" id="mjF-FC-zXo"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Q1J-Yb-miF" firstAttribute="top" secondItem="UJn-0w-QvB" secondAttribute="top" constant="5" id="0uI-vN-GTN"/>
+                        <constraint firstAttribute="bottom" secondItem="Q1J-Yb-miF" secondAttribute="bottom" constant="5" id="8jr-06-bP2"/>
+                        <constraint firstItem="Q1J-Yb-miF" firstAttribute="leading" secondItem="UJn-0w-QvB" secondAttribute="leading" constant="10" id="jRZ-QO-DJ0"/>
+                        <constraint firstAttribute="trailing" secondItem="Q1J-Yb-miF" secondAttribute="trailing" constant="10" id="zGC-2Y-cLO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UJn-0w-QvB" secondAttribute="trailing" id="5ow-Ih-8zI"/>
+                <constraint firstAttribute="bottom" secondItem="UJn-0w-QvB" secondAttribute="bottom" id="eRm-gV-tKb"/>
+                <constraint firstItem="UJn-0w-QvB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rje-09-BiM"/>
+                <constraint firstItem="UJn-0w-QvB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tRd-pN-rBG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="239.13043478260872" y="-260.49107142857144"/>
+        </view>
+    </objects>
+</document>
