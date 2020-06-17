@@ -3,7 +3,7 @@
     <entity name="Image" representedClassName="Image" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" defaultDateTimeInterval="614011800" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="images" inverseEntity="Task"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">

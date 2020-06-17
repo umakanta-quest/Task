@@ -42,7 +42,14 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         alertVC.addAction(cameraAction)
         alertVC.addAction(galleryAction)
         alertVC.addAction(cancelAction)
-        //alert.popoverPresentationController?.sourceView = self.viewController!.view
+        
+        //alertVC.popoverPresentationController?.sourceView = self.viewController!.view
+        
+        if let popoverController = alertVC.popoverPresentationController {
+            popoverController.sourceView = viewController.view
+            popoverController.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
         viewController.present(alertVC, animated: true, completion: nil)
     }
     

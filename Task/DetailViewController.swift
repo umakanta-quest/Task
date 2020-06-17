@@ -55,6 +55,7 @@ class DetailViewController: UIViewController {
         return dateFormatter
     }()
     
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
